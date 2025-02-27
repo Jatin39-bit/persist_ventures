@@ -4,6 +4,7 @@ import { Moon, Sun, Menu, X, LogOut, Heart, Edit, Upload, User } from "lucide-re
 import { useTheme } from "../context/ThemeContext";
 import { useUser } from '../context/AuthContext';
 import { useRouter } from 'next/navigation';
+import cookies from 'js-cookie'
 
 export default function Navbar() {
   const router=useRouter()
@@ -28,7 +29,7 @@ export default function Navbar() {
   const handleLogout = async () => {
     try {
       localStorage.removeItem("token");
-      document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      cookies.remove("token")
       setLoggedIn(false);
       setUserr(null);
       router.push('/');
