@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -20,6 +20,10 @@ export default function Login() {
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    alert("If you just logged in and can't access the upload or leaderboard page, please refresh. This is due to cookie handling on Vercel.");
+  }, []);
 
   async function login(e) {
     e.preventDefault();
