@@ -28,6 +28,7 @@ export async function POST(request) {
         const token = jwt.sign({ id: user._id }, process.env.SECRET, { expiresIn: "24h" });
         delete user.password;
         const response = NextResponse.json({message:"Logged in successfully", token,user }, { status: 200 });
+        response.headers.set("Set-Cookie", `token=${token}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=86400`);
         return response;
 }
     catch (error) {
