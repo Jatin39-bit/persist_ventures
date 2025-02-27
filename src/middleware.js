@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { jwtVerify } from "jose";
@@ -43,3 +45,5 @@ export const config = {
         '/upload',
     ]
 }
+
+
