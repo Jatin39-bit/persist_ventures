@@ -241,7 +241,7 @@ export default function UploadPage() {
               Upload a Meme
             </h1>
             <p className={`mt-2 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-              Share your funniest memes with the MemeZone community
+              Share your funniest memes with the MemeVerse community
             </p>
           </div>
 
