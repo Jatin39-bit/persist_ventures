@@ -23,6 +23,7 @@ export default function Login() {
 
   useEffect(() => {
     alert("If you just logged in or registered and can't access the upload or leaderboard page, please refresh. This is due to cookie handling on Vercel.");
+    console.log("If you just logged in or registered and can't access the upload or leaderboard page, please refresh. This is due to cookie handling on Vercel.")
   }, []);
 
   async function login(e) {
