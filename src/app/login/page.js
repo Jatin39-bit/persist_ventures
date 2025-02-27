@@ -9,6 +9,7 @@ import { useUser } from '../context/AuthContext';
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLock, FaSignInAlt } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import cookies from 'js-cookie'
 
 export default function Login() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function Login() {
       if (response.status === 200) {
         toast.success("Login Successful");
         localStorage.setItem("token", response.data.token);
-        document.cookie = `token=${response.data.token}`
+        cookies.set("token", response.data.token, { expires: 1 });
         setLoggedIn(true);
         if (response.data.user) {
           setUserr(response.data.user);
@@ -39,8 +40,8 @@ export default function Login() {
     } catch (error) {
       console.log(error);
       localStorage.removeItem("token");
+      cookies.remove('token')
       setLoggedIn(false);
-      document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       toast.error(error.response?.data?.message || "Login failed");
     } finally {
       setIsLoading(false);
