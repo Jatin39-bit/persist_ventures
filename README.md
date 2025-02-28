@@ -74,8 +74,8 @@ Since the meme API lacked enough data, I built my own **backend with a database 
 
 ### 🔧 **Clone the Repository**  
 ```bash
-git clone https://github.com/your-username/memeverse.git
-cd memeverse
+git clone https://github.com/Jatin39-bit/persist_ventures.git
+cd persist_ventures
 📦 Install Dependencies
 npm install
 
