@@ -18,7 +18,7 @@ import { useUser } from "../context/AuthContext";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import bgImage from "../assets/image3.png";
+import bgImage from "../assets/image1.png";
 
 export default function MemePage() {
   const [memeData, setMemeData] = useState(null);
