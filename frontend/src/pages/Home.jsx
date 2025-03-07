@@ -321,13 +321,15 @@ export default function Home() {
           </div>
 
           {loading ? (
-            <motion.div
+            <div
               className="flex justify-center items-center h-64"
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 1 }}
-            >
-              <FaLaughSquint size={48} className="text-yellow-400" />
-            </motion.div>
+              <motion.span
+    animate={{ rotate: 360 }}
+    transition={{ repeat: Infinity, duration: 1 }}
+  >
+    <FaLaughSquint size={48} className="text-yellow-400" />
+  </motion.span>
+            </div>
           ) : (
             <motion.div
               className="columns-1 sm:columns-2 lg:columns-3 gap-6 w-full max-w-7xl px-4 sm:px-6"
