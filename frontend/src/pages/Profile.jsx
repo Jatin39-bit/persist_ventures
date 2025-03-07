@@ -241,9 +241,8 @@ const ProfilePage = () => {
                         transition={{ type: "spring", stiffness: 100, delay: index * 0.05 }}
                         className={`rounded-lg overflow-hidden ${darkMode ? "bg-gray-800/30 backdrop-blur-md border border-gray-700/50" : "bg-white shadow-md border border-gray-200"}`}
                         whileHover={{ scale: 1.02 }}
-                        onClick={()=>navigate(`/meme/${meme._id}`)}
                       >
-                        <img src={meme.url} alt={meme.name} className="w-full h-64 object-cover" loading="lazy" />
+                        <img onClick={()=>navigate(`/meme/${meme._id}`)} src={meme.url} alt={meme.name} className="w-full h-64 object-cover" loading="lazy" />
                         <div className="p-4">
                           <h3 className="font-fredoka text-lg mb-2">{meme.name}</h3>
                           <div className={`flex justify-between items-center text-sm ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
