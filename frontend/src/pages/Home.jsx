@@ -322,7 +322,7 @@ export default function Home() {
 
           {loading ? (
             <div
-              className="flex justify-center items-center h-64"
+              className="flex justify-center items-center h-64">
               <motion.span
     animate={{ rotate: 360 }}
     transition={{ repeat: Infinity, duration: 1 }}
