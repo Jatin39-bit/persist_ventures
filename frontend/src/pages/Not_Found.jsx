@@ -167,38 +167,6 @@ export default function NotFound() {
               </motion.div>
             </div>
           </div>
-
-          <div className="px-8 pb-8">
-            <h2 className={`text-xl sm:text-2xl font-fredoka ${darkMode ? "text-gray-200" : "text-gray-800"} mb-4`}>
-              Fresh memes to cure your disappointment:
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {[1, 2, 3].map((id) => (
-                <motion.div
-                  key={id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: id * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="relative rounded-lg overflow-hidden bg-gray-200 aspect-square"
-                >
-                  <Link to={`/meme/${id}`}>
-                    <img
-                      src={`/api/placeholder/150/150`}
-                      alt={`Trending meme ${id}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className={`absolute inset-0 flex items-center justify-center ${darkMode ? "bg-black/0 group-hover:bg-black/20" : "bg-black/0 group-hover:bg-black/10"} transition-all`}>
-                      <span className={`font-fredoka ${darkMode ? "text-white/0 group-hover:text-white/100" : "text-white/0 group-hover:text-white/100"} transition-all`}>
-                        Much Wow
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </motion.div>
 
         <motion.div
