@@ -176,7 +176,7 @@ export default function NotFound() {
           className="mt-8 text-center max-w-md"
         >
           <p
-            className={`text-sm italic cursor-pointer ${darkMode ? "text-gray-400 hover:text-blue-400" : "text-gray-500 hover:text-indigo-500"}`}
+            className={`text-sm italic cursor-pointer ${darkMode ? "text-gray-200 hover:text-blue-400" : "text-gray-200 hover:text-indigo-500"}`}
             onClick={changeMeme}
           >
             "When one meme URL dies, another is born. Such is the circle of internet life."
