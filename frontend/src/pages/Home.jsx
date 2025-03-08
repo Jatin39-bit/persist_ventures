@@ -312,7 +312,7 @@ export default function Home() {
                 className={`text-4xl font-bold gradient-shift ${
                   darkMode
                     ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
-                    : "bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600"
+                    : "text-gray-200"
                 }`}
               >
                 Trending Memes
