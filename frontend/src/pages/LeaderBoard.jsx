@@ -275,7 +275,7 @@ export default function Leaderboard() {
                         ...(index < 3 ? { y: -5 } : {}),
                       }}
                     >
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full mr-0 sm:mr-3 mb-2 sm:mb-0">
+                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full mr-0 sm:mr-3 mb-2 sm:mb-0">
                         <span className="text-base sm:text-lg font-bold">
                           {index + 1}
                         </span>
@@ -298,13 +298,13 @@ export default function Leaderboard() {
                         </p>
                       </div>
                       <div className="flex items-center space-x-2 sm:space-x-3 mt-2 sm:mt-0">
-                        <div className="flex items-center space-x-1 bg-gray-700/50 px-2 py-1 rounded-full">
+                        <div className="flex items-center space-x-1 bg-gradient-to-br from-pink-400 to-purple-500 px-2 py-1 rounded-full">
                           <Heart className="text-red-500 w-4 h-4 sm:w-5 sm:h-5" />
                           <span className="text-xs sm:text-sm">
                             {meme.likes.toLocaleString()}
                           </span>
                         </div>
-                        <div className="flex items-center space-x-1 bg-gray-700/50 px-2 py-1 rounded-full">
+                        <div className="flex items-center space-x-1 bg-gradient-to-br from-pink-400 to-purple-500 px-2 py-1 rounded-full">
                           <MessageCircle className="text-blue-500 w-4 h-4 sm:w-5 sm:h-5" />
                           <span className="text-xs sm:text-sm">
                             {meme.comments.toLocaleString()}
@@ -323,7 +323,7 @@ export default function Leaderboard() {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="text-xl sm:text-2xl font-fredoka mb-4 sm:mb-6 border-b border-gray-700/50 pb-2">
+                <h2 className="text-xl sm:text-2xl font-fredoka mb-4 sm:mb-6 border-b text-gray-200 border-gray-700/50 pb-2">
                   👑 Top Users by Engagement
                 </h2>
                 <div className="space-y-3 sm:space-y-4 mb-12">
@@ -351,7 +351,7 @@ export default function Leaderboard() {
                         ...(index < 3 ? { y: -5 } : {}),
                       }}
                     >
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full mr-0 sm:mr-3 mb-2 sm:mb-0">
+                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full mr-0 sm:mr-3 mb-2 sm:mb-0">
                         <span className="text-base sm:text-lg font-bold">
                           {index + 1}
                         </span>
@@ -372,7 +372,7 @@ export default function Leaderboard() {
                           </span>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-1 bg-gray-700/50 px-2 py-1 rounded-full mt-2 sm:mt-0">
+                      <div className="flex items-center space-x-1 bg-gradient-to-br from-pink-400 to-purple-500 px-2 py-1 rounded-full mt-2 sm:mt-0">
                         <Heart className="text-red-500 w-4 h-4 sm:w-5 sm:h-5" />
                         <span className="text-xs sm:text-sm">
                           {user.totalLikes.toLocaleString()}
