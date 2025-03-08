@@ -12,10 +12,7 @@ module.exports.signup = async (req, res) => {
     const { name, email, password } = req.body;
     const user = await userModel.findOne({ email });
     if (user) {
-      return NextResponse.json(
-        { message: "User already exists" },
-        { status: 400 }
-      );
+      return res.status(400).json({message:"User already exists"})
     }
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new userModel({ email, name, password: hashedPassword });
